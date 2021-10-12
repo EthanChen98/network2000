@@ -140,31 +140,33 @@
                     <div class="contact-us-box">
                         <h3 class="title">Get in Touch</h3>
                         <p>Give us a call or drop by anytime, we endeavour to <br> answer all enquiries within 24 hours.</p>
+                        <p id="needUserInfo" style="color: darkred; display: none;" >* Please fill out your contact information</p>
+                        <p id="Successful" style="color: green; display: none;">* Submitted successfully</p>
                         <form action="#">
                             <div class="row no-gutters">
                                 <div class="col-lg-6">
                                     <div class="input-box mt-10">
-                                        <input type="text" placeholder="Your name">
+                                        <input id="userName" type="text" placeholder="Your name">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="input-box mt-10">
-                                        <input type="email" placeholder="Email address">
+                                        <input id="userEmail" type="email" pattern="[^ @]*@[^ @]*" placeholder="Email address">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="input-box mt-10">
-                                        <input type="text" placeholder="number">
+                                        <input id="phoneNumber" type="number" maxlength=10 type="text" placeholder="Phone Number" >
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="input-box mt-10">
-                                        <input type="text" placeholder="Location">
+                                        <input id="location" type="text" placeholder="Location">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="input-box mt-10">
-                                        <textarea name="#" id="#" cols="30" rows="10" placeholder="write message"></textarea>
+                                        <textarea name="#" id="message" cols="30" rows="10" placeholder="write message"></textarea>
                                     </div>
                                     <ul class="checkbox_common checkbox_style5">
                                         <li>
@@ -173,7 +175,7 @@
                                         </li>
                                     </ul>
                                     <div class="input-box">
-                                        <button class="main-btn " type="submit">Submit</button>
+                                        <button class="main-btn " type="submit" onclick="submitUserContactInfo()">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -307,6 +309,7 @@
 
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact-us.js"></script>
 
 </body>
 
